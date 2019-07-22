@@ -1,0 +1,9 @@
+<h1>Listes des taches</h1>
+<div *ngFor="let liste of listeTaches">
+  <h2>{{liste.titre}}</h2>
+  <ul>
+    <li *ngFor="let tache of liste.aRealiser">
+      <h3>{{tache.titre}}</h3>
+    </li>
+  </ul>
+</div>
