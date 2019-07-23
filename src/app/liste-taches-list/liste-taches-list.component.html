@@ -1,9 +1,11 @@
-<h1>Listes des taches</h1>
-<div *ngFor="let liste of listeTaches">
-  <h2>{{liste.titre}}</h2>
-  <ul>
-    <li *ngFor="let tache of liste.aRealiser">
-      <h3>{{tache.titre}}</h3>
-    </li>
-  </ul>
-</div>
+<h1>Mes listes des taches</h1>
+<mat-accordion multi="true">
+<mat-expansion-panel *ngFor="let liste of listeTaches">
+  <mat-expansion-panel-header>
+   <h2>{{liste.titre}}</h2>
+  </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item *ngFor="let tache of liste.aRealiser"><mat-checkbox [(ngModel)]="tache.estFait">{{tache.titre}}</mat-checkbox></mat-list-item>
+    </mat-list>
+</mat-expansion-panel>
+</mat-accordion>
