@@ -1,8 +1,8 @@
-<h1>Mes listes des taches</h1>
+<mat-toolbar>Mes listes des taches</mat-toolbar>
 <mat-accordion multi="true">
 <mat-expansion-panel *ngFor="let liste of listeTaches">
-  <mat-expansion-panel-header>
-   <h2>{{liste.titre}}</h2>
+  <mat-expansion-panel-header >
+   <h2 matBadge="{{liste.aRealiser.length}}">{{liste.titre}}</h2>
   </mat-expansion-panel-header>
     <mat-list>
       <mat-list-item *ngFor="let tache of liste.aRealiser"><mat-checkbox [(ngModel)]="tache.estFait">{{tache.titre}}</mat-checkbox></mat-list-item>

@@ -1,0 +1,10 @@
+<mat-toolbar>Se connecter</mat-toolbar>
+<mat-form-field>
+  <input matInput type="text" placeholder="compte" [(ngModel)]="utilisateurCourant.nom" />
+</mat-form-field>
+<mat-form-field>
+  <input matInput type="password" placeholder="mot de passe" [(ngModel)]="utilisateurCourant.motdePasse"/>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="seConnecter()">connexion</button>
+<div *ngIf="message" class="mat-background-accent"><p class="mat-accent">{{message}}</p></div>
+<div *ngIf="erreur"  class="mat-background-warn"><p class="mat-warn">{{erreur}}</p></div>

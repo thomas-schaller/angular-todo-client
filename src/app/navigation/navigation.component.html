@@ -1,0 +1,6 @@
+<mat-toolbar color="primary" role="heading">
+  <span  *ngIf="estConnecte()">
+  <button mat-button  routerLink="/listes" ><mat-icon aria-hidden="false" aria-label="mes listes">home</mat-icon></button>
+    <button mat-button (click)="seDeconnecter()" ><span>{{nomUtilisateur()}}</span><mat-icon aria-hidden="false" aria-label="se déconnecter">exit_to_app</mat-icon></button>
+  </span>
+</mat-toolbar>

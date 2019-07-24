@@ -7,11 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { ListeTachesListComponent } from './liste-taches-list/liste-taches-list.component';
 import {
+  MatBadgeModule, MatButtonModule,
   MatCardModule,
   MatCheckboxModule,
   MatExpansionModule,
-  MatFormFieldModule,
-  MatListModule,
+  MatFormFieldModule, MatIconModule, MatInputModule,
+  MatListModule, MatToolbarModule,
   MatTreeModule
 } from "@angular/material";
 import { AuthInterceptor } from './auth-interceptor';
@@ -37,7 +38,12 @@ import { NavigationComponent } from './navigation/navigation.component';
     MatCardModule,
     MatListModule,
     MatExpansionModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatBadgeModule,
+    MatButtonModule,
+    MatIconModule
   ],
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }],
   bootstrap: [AppComponent]
